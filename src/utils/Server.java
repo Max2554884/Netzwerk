@@ -1,3 +1,5 @@
+package utils;
+
 import java.net.*;
 import java.io.*;
 
@@ -6,11 +8,11 @@ import java.io.*;
  * Materialien zu den zentralen NRW-Abiturpruefungen im Fach Informatik ab 2018
  * </p>
  * <p>
- * Klasse Server
+ * Klasse utils.Server
  * </p>
  * <p>
- * Objekte von Unterklassen der abstrakten Klasse Server ermoeglichen das
- * Anbieten von Serverdiensten, so dass Clients Verbindungen zum Server mittels
+ * Objekte von Unterklassen der abstrakten Klasse utils.Server ermoeglichen das
+ * Anbieten von Serverdiensten, so dass Clients Verbindungen zum utils.Server mittels
  * TCP/IP-Protokoll aufbauen koennen. Zur Vereinfachung finden Nachrichtenversand
  * und -empfang zeilenweise statt, d. h., beim Senden einer Zeichenkette wird ein
  * Zeilentrenner ergaenzt und beim Empfang wird dieser entfernt.
@@ -49,9 +51,9 @@ public abstract class Server{
     public void run() {
       while (active) {
         try {
-          //Warten auf Verbdinungsversuch durch Client:
+          //Warten auf Verbdinungsversuch durch utils.Client:
           Socket clientSocket = serverSocket.accept();
-          // Eingehende Nachrichten vom neu verbundenen Client werden
+          // Eingehende Nachrichten vom neu verbundenen utils.Client werden
           // in einem eigenen Thread empfangen:
           addNewClientMessageHandler(clientSocket);
           processNewConnection(clientSocket.getInetAddress().getHostAddress(),clientSocket.getPort());
@@ -59,7 +61,7 @@ public abstract class Server{
 
         catch (IOException e) {
           /*
-           * Kann keine Verbindung zum anfragenden Client aufgebaut werden,
+           * Kann keine Verbindung zum anfragenden utils.Client aufgebaut werden,
            * geschieht nichts.
            */
         }

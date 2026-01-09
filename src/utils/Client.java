@@ -1,3 +1,5 @@
+package utils;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,12 +11,12 @@ import java.net.Socket;
  * Materialien zu den zentralen NRW-Abiturpruefungen im Fach Informatik ab 2018
  * </p>
  * <p>
- * Klasse Client
+ * Klasse utils.Client
  * </p>
  * <p>
- * Objekte von Unterklassen der abstrakten Klasse Client ermoeglichen
- * Netzwerkverbindungen zu einem Server mittels TCP/IP-Protokoll. Nach
- * Verbindungsaufbau koennen Zeichenketten (Strings) zum Server gesendet und von
+ * Objekte von Unterklassen der abstrakten Klasse utils.Client ermoeglichen
+ * Netzwerkverbindungen zu einem utils.Server mittels TCP/IP-Protokoll. Nach
+ * Verbindungsaufbau koennen Zeichenketten (Strings) zum utils.Server gesendet und von
  * diesem empfangen werden, wobei der Nachrichtenempfang nebenlaeufig geschieht. 
  * Zur Vereinfachung finden Nachrichtenversand und -empfang zeilenweise statt,
  * d. h., beim Senden einer Zeichenkette wird ein Zeilentrenner ergaenzt und beim
