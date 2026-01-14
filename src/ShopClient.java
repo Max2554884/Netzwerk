@@ -1,7 +1,8 @@
 import utils.Client;
 
 public abstract class ShopClient extends Client {
-    public ShopClient(String pServerIP, int pServerport){
+    public ShopClient(String pServerIP, int pServerport)
+    {
         super(pServerIP, pServerport);
     }
     public void processMessage(String pMessage){
@@ -10,6 +11,13 @@ public abstract class ShopClient extends Client {
 
     public void groesseFarbeWaehlen(String pGroesse, String pFarbe){
         this.send("TSHIRT:"+pGroesse+":"+pFarbe);
+    }
+    public void bestaetigen(String pAntwort){
+        this.send("Bestaetigung:"+pAntwort);
+    }
+    public void abmelden()
+    {
+        this.send("Abmelden");
     }
 
 
