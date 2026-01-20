@@ -10,8 +10,8 @@ public class main {
         Scanner scanner =new Scanner(System.in);
 
         //wichtig ist, das der sever und der Client denselben Port nutzten
-        ShopServer server = new ShopServer(16);
-        ShopClient kunde = new ShopClient("localhost",16);
+        ShopServer server = new  ShopServer(16);
+        ShopClient kunde = new  ShopClient("localhost",16);
 
         Thread.sleep(45);
 
@@ -27,6 +27,7 @@ public class main {
                 System.out.println("Welche Farbe soll das TShirt haben? ");
                 farbe=scanner.next();
                 kunde.groesseFarbeWaehlen(groessse,farbe);
+                System.out.println("Danke für die bestellung" );
 
             }else if( auswahl==2){
                 System.out.println("Ja oder Nein");

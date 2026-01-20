@@ -1,6 +1,6 @@
 import utils.Server;
 
-public abstract class ShopServer extends Server {
+public  class ShopServer extends Server {
 
     public ShopServer(int pPort) {
         super(pPort);
@@ -32,6 +32,11 @@ public abstract class ShopServer extends Server {
                 this.send(pClientIP, pClientPort, "Bitte geben Sie ja oder nein ein.");
             }
         }
+    }
+
+    @Override
+    public void processClosingConnection(String pClientIP, int pClientPort) {
+        System.out.println("Danke für den einkauf " );
     }
 
 }

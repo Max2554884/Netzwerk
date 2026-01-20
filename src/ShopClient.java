@@ -1,6 +1,6 @@
 import utils.Client;
 
-public abstract class ShopClient extends Client {
+public class ShopClient extends Client {
     public ShopClient(String pServerIP, int pServerport)
     {
         super(pServerIP, pServerport);
